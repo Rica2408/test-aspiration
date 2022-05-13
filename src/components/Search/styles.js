@@ -15,6 +15,9 @@ export const useStyles = createUseStyles({
     display: 'flex', 
     flexDirection: 'column'
   },
+  containerRelatedTopic: {
+    marginBottom: 10
+  },
   relatedTopicDetail: {
     display: 'flex', 
     flexDirection: 'column', 

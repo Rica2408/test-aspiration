@@ -32,35 +32,34 @@ const Search = () => {
       <Box>
         {loading ? 
           <CircularProgress className={classes.circularProgress} /> :
-          error ? 
+            error ? 
             <Box>
               <h1>We have some problems, try later</h1>
             </Box> 
             :          
-          <Box>
-            {data.topic.relatedTopics.length ? <h1>Related Topic</h1> : <h1>We don't find any informaction with this topic</h1>}
-            {data.topic.relatedTopics.map((realtedTopic, index) => (
-              <Box key={index} className={classes.topic}>
-                <Box style={{display: 'flex'}}>
-                  <TopicIcon />
-                  <Box onClick={() => setTopicSelected(realtedTopic.name)}>
-                    {realtedTopic.name} - Stars: {realtedTopic.stargazers.totalCount}
+            <Box>
+              {data.topic.relatedTopics.length ? <h1>Related Topic</h1> : <h1>We don't find any informaction with this topic</h1>}
+              {data.topic.relatedTopics.map((realtedTopic, index) => (
+                <Box key={index} className={classes.topic}>
+                  <Box style={{display: 'flex'}}>
+                    <TopicIcon />
+                    <Box onClick={() => setTopicSelected(realtedTopic.name)}>
+                      {realtedTopic.name} - Stars: {realtedTopic.stargazers.totalCount}
+                    </Box>
                   </Box>
+                  {topicSelected === realtedTopic.name ? 
+                    <Box className={classes.containerRelatedTopic}>
+                      <h3>Related topics</h3>
+                      {realtedTopic.relatedTopics.map((itemRelated, indexRelated) => (
+                        <Box key={indexRelated} className={classes.relatedTopicDetail}>
+                          {itemRelated.name} - Stars: {itemRelated.stargazers.totalCount}
+                        </Box>
+                      ))}
+                    </Box>
+                  : ''}
                 </Box>
-                {topicSelected === realtedTopic.name ? 
-                  <Box style={{marginBottom: 10}}>
-                    <h3>Related topics</h3>
-                    {realtedTopic.relatedTopics.map((itemRelated, indexRelated) => (
-                      <Box key={indexRelated} className={classes.relatedTopicDetail}>
-                        {itemRelated.name} - Stars: {itemRelated.stargazers.totalCount}
-                      </Box>
-                    ))}
-
-                  </Box>
-                : ''}
-              </Box>
-            ))}
-          </Box>
+              ))}
+            </Box>
         }
       </Box>
     </Box>
