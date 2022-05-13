@@ -8,15 +8,15 @@ import { useStyles } from "./styles";
 const Search = () => {
   const classes = useStyles()
   const [topicSelected, setTopicSelected] = useState('')
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('react')
   const [topic, setTopic] = useState('react')
 
   const {loading, error,  data } = useQuery(GET_TOPIC, {
     variables: {
       topic
-    }
+    },
+    fetchPolicy: "no-cache"
   })
-  console.log('data', data)
   
   return(
     <Box className={classes.container}>
@@ -38,7 +38,7 @@ const Search = () => {
             </Box> 
             :          
             <Box>
-              {data.topic.relatedTopics.length ? <h1>Related Topic</h1> : <h1>We don't find any informaction with this topic</h1>}
+              {data.topic.relatedTopics.length ? <h1>Related Topic - {topic}</h1> : <h1>We don't find any informaction with this topic</h1>}
               {data.topic.relatedTopics.map((realtedTopic, index) => (
                 <Box key={index} className={classes.topic}>
                   <Box style={{display: 'flex'}}>
