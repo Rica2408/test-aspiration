@@ -16,4 +16,28 @@ First you need to add the file .env and add the constant **REACT_APP_API** and a
 ## Example
 
 REACT_APP_API = ghp_uEjvim4OQKqlpNmrXMcjokavdnIDSf06DIAj
- 
+
+# Improvements
+
+## Code Structuring:
+
+I think that i can improve the structure of the code with some libraries like eslint or using typescript, we need to create the types of each function, constant and components.
+
+## Refactoring:
+
+We could add a file that have the mean function that we use to use.
+Using High order components.
+
+## Additional features:
+
+I could add more queries and information when i click in any topic, I would reduce the first query, that I use have all de information of topics and related topic, I would delete the button of search and I would add the function of search button when the user stop to write in the input.
+
+I would add other that test more components and functions
+
+# Libraries and Tools
+  material ui
+  @apollo/client
+  @emotion/styled
+  graphql
+  node 18.1.0
+  react 18.1.0
