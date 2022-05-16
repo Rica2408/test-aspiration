@@ -25,14 +25,14 @@ I think that i can improve the structure of the code with some libraries like es
 
 ## Refactoring:
 
-We could add a file that have the mean function that we use to use.
+I could add a file that has the core functions that can be reused.
 Using High order components.
 
 ## Additional features:
 
-I could add more queries and information when i click in any topic, I would reduce the first query, that I use have all de information of topics and related topic, I would delete the button of search and I would add the function of search button when the user stop to write in the input.
+I could add more queries and information when i click in any topic, I would reduce the first query, because i got all the information of topics and related topic, I would delete the button of search and I would add the function of search button when the user stop to write in the input.
 
-I would add other that test more components and functions
+I would add other test thath contain more components and functions
 
 # Libraries and Tools
 
