@@ -35,9 +35,10 @@ I could add more queries and information when i click in any topic, I would redu
 I would add other that test more components and functions
 
 # Libraries and Tools
-  material ui
-  @apollo/client
-  @emotion/styled
-  graphql
+
+  material ui: manage styles of component
+  @apollo/client: connect graphql whit React
+  react-jss: manage CSS with JSS
+  graphql: use queries that provaid Github API
   node 18.1.0
   react 18.1.0
